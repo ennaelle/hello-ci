@@ -24,6 +24,6 @@ jobs:
                 name: hello_compil
             - name: exe test
               run: |
-                  ls -l hello
+                  chmod +x hello
                   ./hello
 
