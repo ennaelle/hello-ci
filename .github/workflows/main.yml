@@ -23,5 +23,7 @@ jobs:
               with:
                 name: hello_compil
             - name: exe test
-              run: ./hello
+              run: |
+                  ls -l hello
+                  ./hello
 
