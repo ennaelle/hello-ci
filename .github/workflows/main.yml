@@ -6,11 +6,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v3
             - name: compilation
               run: gcc -Wall -o hello hello.c
             - name: upload des binaires
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                 name: hello_compil
                 path: ./hello 
