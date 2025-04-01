@@ -4,10 +4,10 @@ on: [push]
 jobs:
     build:
         runs-on: ubuntu-latest
-    steps:
-        - name: checkout
-          uses: actions/checkout@v4
-        - name: compilation
-          run: gcc -Wall -o hello hello.c
-        - name: exe test
-          run: ./hello
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: compilation
+              run: gcc -Wall -o hello hello.c
+            - name: exe test
+              run: ./hello
