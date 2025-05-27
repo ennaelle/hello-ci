@@ -8,7 +8,7 @@ jobs:
             - name: checkout
               uses: actions/checkout@v3
             - name: compilation
-              run: gcc -Wall -o hello hello.c
+              run: gcc -Wall -static -o hello hello.c
             - name: upload des binaires
               uses: actions/upload-artifact@v4
               with:
@@ -24,6 +24,8 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: hello_compil
+            - name: lister les fichiers
+              run: ls -la
             - name: exe test
               run: |
                   chmod +x hello
