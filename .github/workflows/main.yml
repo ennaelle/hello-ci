@@ -16,7 +16,7 @@ jobs:
                 path: ./hello 
     exetest:
         runs-on: self-hosted
-          containers:
+        containers:
             image: alpine:latest
         needs: [build]
         steps:
