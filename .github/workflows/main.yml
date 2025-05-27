@@ -15,7 +15,7 @@ jobs:
                 name: hello_compil
                 path: ./hello 
     exetest:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         needs: [build]
         steps:
             - name: dwnload des binaires
