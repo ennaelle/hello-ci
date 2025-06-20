@@ -1,5 +1,5 @@
 name: test C compilation
-on: [workflow_call]
+on: [main]
 
 jobs:
     build:
