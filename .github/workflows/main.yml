@@ -9,7 +9,7 @@ jobs:
         - name: checkout
           uses: actions/checkout@v3
         - name: lint
-          run: gcc -fsyntax-only helo.c
+          run: gcc -fsyntax-only hello.c
     lintpy:
       runs-on: ubuntu-latest
       steps:
