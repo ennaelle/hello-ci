@@ -49,4 +49,4 @@ jobs:
         needs: [exetest]
         steps:
             - name: deploy
-              runs: echo deploy
+              run: echo deploy
