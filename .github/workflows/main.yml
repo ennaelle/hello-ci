@@ -16,7 +16,7 @@ jobs:
                 name: hello_compil
                 path: ./hello 
     exetest:
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         container:
             image: alpine:latest
         needs: [build]
