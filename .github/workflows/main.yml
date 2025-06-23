@@ -24,7 +24,7 @@ jobs:
             - name: compilation
               run: gcc -Wall -static -o hello hello.c
             - name: test
-              run: touch my_app/test.txt
+              run: echo test > my_app/test.txt
             - name: upload des binaires
               uses: actions/upload-artifact@v4
               with:
