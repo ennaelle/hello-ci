@@ -1,6 +1,8 @@
 name: test C compilation
 on: 
   workflow_dispatch:
+permissions:
+  actions: write
   
 jobs:
     lintc:
