@@ -24,17 +24,12 @@ jobs:
               uses: actions/checkout@v3
             - name: compilation
               run: gcc -Wall -static -o hello hello.c
-            - name: test
-              run: |
-                mkdir my_app
-                echo test > my_app/test.txt
             - name: upload des binaires
               uses: actions/upload-artifact@v4
               with:
-                name: hello_compil
+                name: ${{ github.job }}-${{ github.sha }}
                 path: |
                   ./hello
-                  my_app/test.txt
     exetest:
         runs-on: ubuntu-latest
         container:
