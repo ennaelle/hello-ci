@@ -39,7 +39,7 @@ jobs:
             - name: dwnload des binaires
               uses: actions/download-artifact@v4
               with:
-                name: hello_compil
+                name: build
             - name: lister les fichiers
               run: ls -la
             - name: exe test
