@@ -37,9 +37,9 @@ jobs:
         needs: [build]
         steps:
             - name: dwnload des binaires
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
-                name: build
+                name: build-${{ github.sha }}
             - name: lister les fichiers
               run: ls -la
             - name: exe test
