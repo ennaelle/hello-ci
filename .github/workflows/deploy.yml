@@ -1,0 +1,18 @@
+name: deployment workflow
+on:
+  workflow_run:
+    workflows: ["test C compilation"]      
+    types:
+      - completed 
+
+jobs:
+    deploy_c:
+        runs-on: ubuntu-latest
+        environment:
+          name: production
+        if: |
+            github.event.workflow_run.conclusion == 'success' &&
+            startsWith(github.event.workflow_run.head_branch, 'v')
+        steps:
+            - name: deploy
+              run: echo deploy
